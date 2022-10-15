@@ -18,11 +18,11 @@ use App\Http\Controllers\DavalebaControler;
 //    function (Request $request) {
 //    return $request->user();
 //});
-Route::post('/Davaleba',[DavalebaControler::class,'store']);
-Route::get('/Davaleba',[DavalebaControler::class,'index']);
-Route::get('/Davaleba',[DavalebaControler::class,'hoobi']);
-Route::get('/Davaleba',[DavalebaControler::class,'age']);
-Route::get('/Davaleba',[DavalebaControler::class,'food']);
-Route::get('/Davaleba',[DavalebaControler::class,'FutureJob']);
-Route::delete('/Davaleba',[DavalebaControler::class,'hopes']);
+Route::post('/',[DavalebaControler::class,'store']);
+Route::get('/index',[DavalebaControler::class,'index']);
+Route::get('/hobbi',[DavalebaControler::class,'hoobi']);
+Route::get('/age',[DavalebaControler::class,'age']);
+Route::get('/food',[DavalebaControler::class,'food']);
+Route::get('/futureJob',[DavalebaControler::class,'FutureJob']);
+Route::delete('/hopes',[DavalebaControler::class,'hopes']);
 Route::put('/Davaleba',[DavalebaControler::class,'LETSGOOOOOOOO']);
