@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DavalebaControler;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,11 +18,34 @@ use App\Http\Controllers\DavalebaControler;
 //    function (Request $request) {
 //    return $request->user();
 //});
-Route::post('/',[DavalebaControler::class,'store']);
-Route::get('/index',[DavalebaControler::class,'index']);
-Route::get('/hobbi',[DavalebaControler::class,'hoobi']);
-Route::get('/age',[DavalebaControler::class,'age']);
-Route::get('/food',[DavalebaControler::class,'food']);
-Route::get('/futureJob',[DavalebaControler::class,'FutureJob']);
-Route::delete('/hopes',[DavalebaControler::class,'hopes']);
-Route::put('/Davaleba',[DavalebaControler::class,'LETSGOOOOOOOO']);
+Route::get('/name',function (){
+    return 'დემეტრე კახაბრიშვილი';
+});
+Route::get('/age',function (){
+    return '20';
+});
+
+Route::get('/hobby',function (){
+    return 'gaming, coding';
+});
+Route::get('/futureJob',function (){
+    return 'Fullstack დეველოპერი ჯერ მარტო პრონტს ვუთმობ დიდ დროს ბაკი გამოცდილების მისაღებად ამოვირჩიე';
+
+});
+
+Route::get('/Food',function (){
+    return 'ქართული სამზარეულო';
+
+});
+Route::post('/Array',function(){
+    $array = ['Message'=>'პოსტი წარმატებით განახლდა'];
+   return response()->json($array);
+});
+Route::delete('/Array',function(){
+    $array = ['Message'=>'პოსტი წარმატებით წაიშალა'];
+    return response()->json($array);
+});
+Route::put('/Array',function(){
+    $array = ['Message'=>'პოსტი წარმატებით აიტვირთა'];
+    return response()->json($array);
+});
